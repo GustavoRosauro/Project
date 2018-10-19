@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BluDataList.Models.Fornecedor>
+
+@{
+    ViewBag.Title = "Fornecedores";
+}
+
+<h2>Fornecedores</h2>
+
+<p>
+    @Html.ActionLink("Novo Fornecedor", "CriarFornecedor", new { idEmpresa = @ViewBag.Idempresa, estado = ViewBag.Estado})
+</p>
+<input value="@ViewBag.Idempresa" hidden/>
+<input value="@ViewBag.Estado" hidden/>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPFCNPJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFCNPJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.ActionLink("Excluir", "DeleFornecedor", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

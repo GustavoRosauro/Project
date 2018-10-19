@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "CriaEmpresa";
+}
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.maskedinput-1.4.1.min.js"></script>
+<h2>Criar Empresa</h2>
+<div class="col-md-12">
+    <label >Nome Fantasia</label>
+    <input type="text" class="form-control" id="nome" /><br />
+    <label >CNPJ</label>
+    <input type="text" id="cnpj" class="form-control" /><br />
+    <label>Estado</label>
+    <select id="UF" class="form-control">
+        <option value="SC">SC</option>
+        <option value="PR">PR</option>
+        <option value="RR">RR</option>
+    </select>
+    <button class="btn btn-default" id="salvar">Salvar</button>
+</div>
+<script src="~/Scripts/CadastroEmpresa.js"></script>
