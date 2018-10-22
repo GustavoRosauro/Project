@@ -173,6 +173,7 @@
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\CadastroEmpresa.js" />
+    <Content Include="Scripts\FiltroFornecedor.js" />
     <Content Include="Scripts\Fornecedor.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

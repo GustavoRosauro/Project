@@ -42,7 +42,8 @@ namespace BluDataList.Controllers
         {
             var dados = DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy"));
             DateTime data = DateTime.Parse(nascimento);
-            if (estado == "PR")
+            var contaNumeros = cnpj.Replace(".","").Replace("/","").Replace("-","");
+            if (estado == "PR" && contaNumeros.Length == 11)
             {
                 var novaData = data.AddYears(+18);
                 if (novaData > dados)

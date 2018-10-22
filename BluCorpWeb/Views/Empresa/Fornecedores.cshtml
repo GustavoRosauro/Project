@@ -5,14 +5,14 @@
 }
 
 <h2>Fornecedores</h2>
-
+<script src="~/Scripts/jquery-3.3.1.js"></script>
 <p>
-    @Html.ActionLink("Novo Fornecedor", "CriarFornecedor", new { idEmpresa = @ViewBag.Idempresa, estado = ViewBag.Estado})
+    @Html.ActionLink("Novo Fornecedor", "CriarFornecedor", new { idEmpresa = @ViewBag.Idempresa, estado = ViewBag.Estado })
 </p>
-<input value="@ViewBag.Idempresa" hidden/>
-<input value="@ViewBag.Estado" hidden/>
+<input value="@ViewBag.Idempresa" hidden />
+<input value="@ViewBag.Estado" hidden />
 
-<table class="table">
+<table id="tabela" class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
@@ -34,7 +34,14 @@
         </th>
         <th></th>
     </tr>
-
+    <tr>
+        <th><input type="text" id="txtColuna1" /></th>
+        <th><input type="text" id="txtColuna2" /></th>
+        <th><input type="text" id="txtColuna3" /></th>
+        <th><input type="text" id="txtColuna4" /></th>
+        <th><input type="text" id="txtColuna5" /></th>
+        <th><input type="text" id="txtColuna6" /></th>
+    </tr>
     @foreach (var item in Model)
     {
         <tr>
@@ -63,3 +70,4 @@
     }
 
 </table>
+<script src="~/Scripts/FiltroFornecedor.js"></script>
